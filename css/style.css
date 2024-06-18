@@ -1,20 +1,58 @@
 html {
-    background-color: #26355D;
+    background-image: url("assets/background.JPG");
 }
 
 h1 {
-    color: #AF47D2;
+    color: yellow;
+    border: 2px solid transparent;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: purple;
     text-align: center;
     font-size: 50px;
 }
 
+input, button {
+    height: 100px;
+    width: 210px; /* Adjusted to make them the same width */
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: purple;
+    color: #F2C18D;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    box-sizing: border-box; /* Ensures padding and border are included in the width and height */
+}
+
+input::placeholder {
+    color: #F2C18D; /* Same color as the button text */
+}
+
 .circle {
-    width: 500px;
-    height: 500px;
-    line-height: 500px;
+    width: 450px;
+    height: 450px;
+    line-height: 450px;
     border-radius: 50%;
     font-size: 50px;
-    color: #FF8F00;
+    color: purple;
     text-align: center;
-    background: #FFDB00;
+    background: yellow;
+    margin: 20px 0;
+}
+
+#remaining-guesses-container {
+    font-size: 30px;
+    color: purple;
+    background: yellow;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

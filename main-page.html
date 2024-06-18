@@ -6,14 +6,26 @@
         <script type="text/javascript" src="js/pick-random-number.js"></script>
     </head>
     <body>
-        <h1>Guess the number :)</h1>
+        <div align="center">
+            <h1>Guess the number :)</h1>
+        </div>
+
         <div align="center">
             <p class="circle" ID="circle">Start new game</p>
         </div>
-        <input type="number" min="0" max="100" placeholder="Take a guess" ID="guess">
-        <button onclick="checkNumber()">Enter</button><br>
-        <p ID="remaining-guesses">5</p>
-        <p>guesses left</p>
-        <button onclick="startNewGame()">Start new game</button>
+
+        <div align="center">
+            <div class="input-container">
+                <input type="number" min="0" max="100" placeholder="Take a guess" ID="guess">
+                <button onclick="checkNumber()">Enter</button>
+                <button onclick="startNewGame()">Start new game</button>
+            </div>
+        </div>
+        
+        <div align="center">
+            <p id="remaining-guesses-container">
+                <span id="remaining-guesses">5</span> guesses left
+            </p>
+        </div>
     </body>
 </html>

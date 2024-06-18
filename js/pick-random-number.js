@@ -7,11 +7,11 @@ function checkNumber() {
     const paragraph = document.getElementById("remaining-guesses");
     const circle = document.getElementById("circle");
 
-    if (guess == number) {
-        alert("Win!");
+    if (guess == number && remainingGuesses > 1) {
+        circle.textContent = "You win ^-^";
     }else if(remainingGuesses == 1){
         paragraph. textContent = 0;
-        circle.textContent = "Try again... The number was " + number;
+        circle.textContent = "The number was " + number;
     }else{
         remainingGuesses = remainingGuesses - 1;
         paragraph.textContent = remainingGuesses;
