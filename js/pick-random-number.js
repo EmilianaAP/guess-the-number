@@ -3,12 +3,30 @@ function pickNumber() {
 }
 
 function checkNumber() {
-    let number = pickNumber(); 
     let guess = document.getElementById("guess").value;
+    const paragraph = document. getElementById("remaining-guesses"); 
 
     if (guess == number) {
         alert("Win!");
-    }else{
+    }else if(remainingGuesses == 1){
+        paragraph. textContent = 0;
         alert("Try again... The number was " + number);
+    }else{
+        remainingGuesses = remainingGuesses - 1;
+        paragraph. textContent = remainingGuesses;
+
+        if(guess < number){
+            alert("The number is higher");
+        }else{
+            alert("The number is lower");
+        }
     }
+}
+
+function startNewGame() {
+    remainingGuesses = 5;
+    number = pickNumber(); 
+
+    const paragraph = document. getElementById("remaining-guesses"); 
+    paragraph. textContent = 5;
 }
